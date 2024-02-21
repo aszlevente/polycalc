@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="style.css">
+  <title>Polycalc</title>
+</head>
+<body>
+    <h1>Polycalc</h1>
+
+    <!-- <input type="text" id="attName"> -->
+    <select id="attName" onchange="selChanged()"></select>
+    <input type="number" id="attHp" value=10>
+    <input type="number" id="attMaxHp" style="display: none;" value=10 onchange="selChanged()">
+    <span>Boost</span><input type="checkbox" id="boost">
+
+    <hr>
+
+    <!-- <input type="text" id="defName"> -->
+    <select id="defName" onchange="selChanged()"></select>
+    <input type="number" id="defHp" value=10>
+    <input type="number" id="defMaxHp" style="display: none;" value=10 onchange="selChanged()">
+    <span>Def. bonus</span><input type="checkbox" id="defBon1">
+    <span>Wall bonus</span><input type="checkbox" id="defBon2">
+    <span>Poisoned</span><input type="checkbox" id="poi">
+
+    <hr>
+
+    <button onclick="showResult()">Calculate</button>
+    <span>Attacker hp: </span><span id="atterResult"></span>
+    <span>Defender hp: </span><span id="deferResult"></span>
+
+    <script src="script.js"></script>
+</body>
+</html>
